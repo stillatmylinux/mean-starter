@@ -10,6 +10,8 @@ module.exports = {
 	 * Google
 	 * https://console.cloud.google.com/apis/credentials/
 	 * 
+	 * Create an oauth service for web
+	 * 
 	 */
 	// googleClientID: 'app-id-goes-here',
 	// googleClientSecret:'secret-password-goes-here',
