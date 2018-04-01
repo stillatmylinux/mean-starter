@@ -1,0 +1,15 @@
+.tabs .tab a:hover, .tabs .tab a.active {
+	color: #009688;
+}
+
+.tabs .tab a {
+	color: rgba(0, 150, 136, 0.7);
+}
+
+.tabs .tab.disabled a, .tabs .tab.disabled a:hover {
+	color: rgba(0, 150, 136, 0.7);
+}
+
+.material-icons {
+	vertical-align: middle;
+}

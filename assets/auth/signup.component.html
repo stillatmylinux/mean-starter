@@ -1,0 +1,30 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+				<div class="form-group">
+					<label for="firstName">First Name</label>
+					<input type="text" id="firstName" class="form-control" formControlName="firstName">
+				</div>
+				<div class="form-group">
+					<label for="lastName">Last Name</label>
+					<input type="text" id="lastName" class="form-control" formControlName="lastName">
+				</div>
+				<div class="form-group">
+					<label for="email">Email</label>
+					<input type="email" id="email" class="form-control" formControlName="email">
+				</div>
+				<div class="form-group">
+					<label for="password">password</label>
+					<input type="password" id="password" class="form-control" formControlName="password">
+				</div>
+				<button class="btn btn-primary" type="submit" [disabled]="!myForm.valid">Submit</button>
+			</form>
+			<br>
+			<div class="divider"></div>
+			<!-- <p class="center"><a href="/google/signin" class="red darken-1 btn"><i class="material-icons white-text">info</i>  Login with Google</a></p> -->
+			<br>
+			<google-button></google-button>
+		</div>
+	</div>
+</div>

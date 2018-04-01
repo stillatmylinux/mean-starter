@@ -1,0 +1,22 @@
+.animate-form-processing {
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	display: none;
+    background-color: rgba(0, 0, 0, .25);
+	top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1000;
+
+	&.active {
+		display: block;
+	}
+
+	.preloader-wrapper {
+		margin: auto;
+		top: 40%;
+		display: block;
+	}
+}

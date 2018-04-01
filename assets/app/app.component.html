@@ -1,0 +1,101 @@
+<div class="content">
+	<div class="content-inside">
+		<header>
+			<nav [ngClass]="{'top-nav blue-grey':true, 'lighten-5':themeMode=='day', 'darken-5':themeMode=='night'}">
+				<div class="grey-text fixed" style="margin-left:20px;">
+					
+				</div>
+				<div class="nav-wrapper">
+					<a href="#" data-activates="mobile-nav" [ngClass]="{'button-collapse':true,'grey-text':themeMode=='day','white-text':themeMode=='night'}"><i class="material-icons">menu</i></a>
+					<a [ngClass]="{'darken-1 grey-text':themeMode=='day', 'white-text':themeMode=='night', 'theme-switch':true}" href="/switch_theme/default" (click)="switchTheme($event)"><i class="material-icons">brightness_3</i><i class="material-icons">wb_sunny</i></a>
+					<a *ngIf="!user" routerLinkActive="hide" [ngClass]="{'darken-1 grey-text':themeMode=='day', 'white-text':themeMode=='night', 'nav-icon-login':true}" [routerLink]="['/auth/signin']"><i class="material-icons">person</i></a>
+					<!-- <a *ngIf="user" [ngClass]="{'darken-1 grey-text':themeMode=='day', 'white-text':themeMode=='night', 'nav-icon-login':true}" [routerLink]="['/auth/signout']"><i class="material-icons">person</i></a> -->
+					<!-- <ul class="right hide-on-sm-and-down">
+						<li><a LinkRouter="[null]" [ngClass]="{'text-darken-2 grey-text':themeMode=='day','text-lighten-2 white-text':themeMode=='night'}">Menu</a></li>
+					</ul> -->
+					<ul class="side-nav" id="mobile-nav">
+						<li><a [routerLink]="['/']">Home</a></li>
+						<li><a *ngIf="user" [routerLink]="['/dashboard']">Dashboard</a></li>
+						<li id="mobile-sidenav-tab">
+							<a *ngIf="!user" [routerLink]="['/auth/signin']">Signin<i class="material-icons">person</i></a>
+							<a *ngIf="user" routerLink="/auth/signin" [routerLink]="['/auth/signin']" (click)="logout()">Logout<i class="material-icons">person</i></a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		
+			<!-- _side-nav  -->
+			<ul id="side-nav" [ngClass]="{'lighten-5':themeMode=='day','darken-5':themeMode=='night','blue-grey side-nav fixed':true}">
+				<!-- <li class="no-padding"><a href="/user/auth" class="waves-effect waves-teal">Login</a></li> -->
+				<!-- <li class="no-padding"><a href="getting-started.html" class="waves-effect waves-teal">Getting Started</a></li> -->
+				<li>
+					<div class="user-view">
+						<div class="background">
+							[image]
+						</div>
+						<span class="name" *ngIf="user?.firstName">{{ user.firstName }}</span>
+						<span class="circle"></span>
+						<span class="email"></span>
+					</div>
+				</li>
+				<li><a routerLink="/"><i class="material-icons">home</i> Home</a></li>
+				<li *ngIf="user" routerLinkActive="active"><a [routerLink]="['/dashboard']"><i class="material-icons">dashboard</i> Dashboard</a></li>
+				<li class="divider"></li>
+				<li *ngIf="user"><a [ngClass]="{'text-darken-2 grey-text':themeMode=='day','text-lighten-2 white-text':themeMode=='night'}" href="#!logout" (click)="authService.logout()"><i class="material-icons">person</i> Logout</a></li>
+			</ul>
+			<!-- _side-nav end -->
+		</header>
+
+		<!-- _main -->
+		<main>
+			<div class="">
+				<br>
+				<div class="row">
+					<div class="col s12">
+
+						<app-error></app-error>
+						<router-outlet></router-outlet>
+					</div>
+				</div>
+			</div>
+		</main>
+		<!-- _main end -->
+
+
+
+
+	</div>
+  </div>
+  
+
+
+
+
+
+<!-- _footer -->
+<footer [ngClass]="{'page-footer blue-grey footer':true,'lighten-4':themeMode=='day','darken-5':themeMode=='night'}">
+	<div class="container">
+		<div class="row">
+			
+			<div class="col m4 s12">
+				<p class="grey-text text-darken-3">About</p>
+			</div>
+			
+			<div class="col m4 s12">
+				<p class="grey-text text-darken-3">Contact Us</p>
+			</div>
+			
+			<div class="col m4 s12" style="overflow: hidden;">
+				<p class="grey-text text-darken-3">Privacy</p>
+			</div>
+		</div>
+	</div>
+	
+	<div class="footer-copyright">
+		<div class="container grey-text text-darken-3">
+			© 2010-2018 Example, All rights reserved.
+			<a class="grey-text text-darken-3 right" href="#!">MIT License</a>
+		</div>
+	</div>
+</footer>
+<!-- _footer end -->

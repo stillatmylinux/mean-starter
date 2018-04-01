@@ -1,0 +1,29 @@
+#customBtn {
+	display: inline-block;
+	background: #4285f4;
+	color: white;
+	width: 190px;
+	/* border: thin solid #888; */
+	box-shadow: 1px 1px 1px grey;
+	white-space: nowrap;
+}
+#customBtn:hover {
+	cursor: pointer;
+}
+span.icon {
+	background: url('/img/btn_google_light_normal_ios.svg') transparent -2px 50% no-repeat;
+	display: inline-block;
+	vertical-align: middle;
+	width: 42px;
+	height: 42px;
+}
+span.buttonText {
+	display: inline-block;
+	vertical-align: middle;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-size: 14px;
+	font-weight: normal;
+	/* Use the Roboto font that is loaded in the <head> */
+	font-family: 'Roboto', sans-serif;
+}

@@ -1,0 +1,17 @@
+<div class="row">
+	<div class="col s12">
+		<ul class="tabs">
+			<li class="tab col s3">
+				<a routerLinkActive="active" [routerLink]="['/dashboard', { outlets: { dashoutlet: ['profile'] } }]">
+					<i class="material-icons">dashboard</i> Your Profile</a>
+			</li>
+			<li routerLinkActive="active" class="tab col s2">
+				<a href="!#">
+					<i class="material-icons">monetization_on</i> Another tab</a>
+			</li>
+		</ul>
+	</div>
+	<div id="ads" class="col s12">
+		<router-outlet name="dashoutlet"></router-outlet>
+	</div>
+</div>

@@ -1,0 +1,38 @@
+#side-nav {
+	li.active {
+		background-color: #009688;
+
+		a, i {
+			color: #FFFFFF !important;
+		}
+	}
+}
+
+.day .theme-switch {
+	color:black;
+}
+.nav-icon-login,
+.theme-switch {
+	float: right;
+	margin-right: 1em;
+}
+
+#mobile-nav {
+	color: #000000;
+}
+
+.page-footer {
+	padding-top: 0;
+	p {
+		margin-top: .5em;
+	}
+
+	position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.hide {
+	display: none;
+}

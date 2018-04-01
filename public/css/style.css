@@ -1,0 +1,132 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+ html, body {
+	height: 100%;
+	margin: 0;
+}
+html .night {
+	color: rgba(255, 255, 255, 0.87);
+}
+.content {
+	min-height: 100%;
+}
+.content-inside {
+	/* padding: 20px; */
+	padding-bottom: 35px;
+}
+.footer {
+	height: 35px;
+	margin-top: -35px;
+}
+.night #mobile-nav.side-nav {
+	color: #FFFFFF;
+	background-color: #464646 !important;
+	border-right: 1px solid #6d6d6d;
+	border-top: 16px solid #607d8b;
+}
+.night .side-nav li {
+	border-bottom: 1px solid #616161;
+}
+.night .side-nav li > a > i.material-icons {
+	color: white;
+}
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+
+header, main, footer {
+	padding-left: 200px;
+}
+
+/* footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+} */
+
+.side-nav {
+	width: 200px;
+}
+#mobile-nav {
+	height: 100vh;
+}
+#mobile-sidenav-tab {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+.day #mobile-sidenav-tab {
+	border-top: 1px solid #969696;
+    background-color: #dcdcdc;
+}
+.night #mobile-sidenav-tab {
+	border-top: 1px solid #3a3a3a;
+	background-color: #607d8b;
+}
+#mobile-sidenav-tab a {
+	float: right;
+}
+
+
+#side-nav .user-view .background {
+	border-bottom: 3px solid #26a69a;
+}
+
+.side-nav li > a {
+	padding: 0 17px;
+}
+.night .side-nav li > a {
+	color: rgba(255, 255, 255, 0.77);
+}
+
+.night .card .card-content {
+	background-color: #737373 !important;
+}
+.night .card .card-content .card-title,
+.night .card .card-content a {
+	color: rgba(255, 255, 255, 0.77) !important;
+}
+
+.night .theme-switch i:first-child,
+.day .theme-switch i:last-child {
+	display: none;
+}
+
+@media only screen and (max-width: 992px) {
+	header, main, footer {
+			padding-left: 0;
+	}
+}
+
+form #body {
+	height: 14rem;
+	margin-top: 5px;
+}
+
+main {
+	/* margin-bottom: 46vh; */
+}
+
+/** dashboard **/
+.tabs .indicator {
+	background-color: #009688;
+}
+
+
+#make-group ul {
+	margin-left: 0 !important;
+	width: 100% !important;
+}
+
+.history-output {
+	clear: both;
+}
