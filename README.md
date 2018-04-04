@@ -14,3 +14,14 @@ npm run build
 
 Leave the above command running and open a new terminal
 npm start
+
+# heroku - first time
+heroku git:remote -a wex-watch
+
+npm run build
+
+# heroku - deploy
+git status
+git add .
+git commit -am "make it better"
+git push heroku master
