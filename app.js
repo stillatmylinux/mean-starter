@@ -27,14 +27,18 @@ require('./config/passport-local')(passport);
 // Load Keys
 const keys = require('./config/keys');
 
-// Map global promises
-mongoose.Promise = global.Promise;
-// Mongoose Connect
-mongoose.connect(keys.mongoURI, {
-  useMongoClient:true
-})
-	.then(() => console.log('MongoDB Connected'))
-	.catch(err => console.log(err));
+if(keys.mongoURI) {
+	// Map global promises
+	mongoose.Promise = global.Promise;
+	// Mongoose Connect
+	mongoose.connect(keys.mongoURI, {
+	  useMongoClient:true
+	})
+		.then(() => console.log('MongoDB Connected'))
+		.catch(err => console.log(err));
+} else {
+	console.log('Error: `keys.mongoURI` is not set in your config/keys_dev.js');
+}
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

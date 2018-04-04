@@ -8,6 +8,12 @@ var bcrypt = require('bcryptjs');
 const User = mongoose.model('User');
 
 module.exports = function (passport) {
+
+	if( typeof(keys.googleClientID) === 'undefined' || typeof keys.googleClientSecret === 'undefined' ) {
+		console.log('Error: `googleClientID` and `googleClientSecret` are not set in your config/keys_dev.js');
+		return;
+	}
+
 	passport.use(
 		new GoogleStrategy({
 			clientID: keys.googleClientID,
