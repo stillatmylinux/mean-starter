@@ -1,7 +1,7 @@
 # mean-starter
 MEAN starter project
 
-- **M** - Mongo
+- **M** - MongoDB
 - **E** - ExpressJS
 - **A** - AngularJS
 - **N** - NodeJS
