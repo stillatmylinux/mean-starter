@@ -4,13 +4,15 @@ import { Subject } from "rxjs/Subject"
 export class CssModeService {
 
 	private cssModeObs = new Subject<string>()
-	private currentMode = 'day'
+	private currentMode: string;
 
 	constructor() {
 
 		let theme = localStorage.getItem('theme');
 		if(theme)
 			this.currentMode = theme;
+		else
+			this.currentMode = 'day';
 
 		this.changeMode(this.currentMode)
 	}
@@ -18,6 +20,10 @@ export class CssModeService {
 	toggleMode() {
 		this.currentMode = (this.currentMode == 'day') ? 'night' : 'day'
 		this.changeMode(this.currentMode)
+	}
+
+	getCurrentMode() {
+		return this.currentMode;
 	}
 
 	changeMode(mode) {

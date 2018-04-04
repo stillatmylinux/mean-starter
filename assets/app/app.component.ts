@@ -27,6 +27,7 @@ export class AppComponent implements OnInit, OnDestroy {
     ngOnInit() {
 
         let component = this;
+        this.themeMode = this.cssmodeservice.getCurrentMode();
         this.subscriptions.push( this.cssmodeservice.cssMode().subscribe(themeMode => {
             this.themeMode = themeMode
         }) );
