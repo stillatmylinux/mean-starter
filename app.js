@@ -79,9 +79,11 @@ app.use('/user', userRoutes);
 app.use('/google',googleauthRoutes);
 app.use('/', appRoutes);
 
+console.log("\nopen http://localhost:8100"); // port set in bin/www
+
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
-    return res.render('index');
+	return res.render('index');
 });
 
 
