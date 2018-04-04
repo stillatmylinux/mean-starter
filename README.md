@@ -29,6 +29,7 @@ npm start
 ```
 
 ### heroku - first time
+Change 'branch-name' to your heroku project
 ```
 heroku git:remote -a branch-name
 npm run build
