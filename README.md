@@ -27,6 +27,7 @@ Leave the above command running and open a new terminal
 ```
 npm start
 ```
+Open your browser to http://localhost:8100
 
 ### heroku - first time
 Change 'branch-name' to your heroku project
