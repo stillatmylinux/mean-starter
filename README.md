@@ -30,7 +30,7 @@ npm start
 
 ### heroku - first time
 ```
-heroku git:remote -a wex-watch
+heroku git:remote -a branch-name
 npm run build
 ```
 
