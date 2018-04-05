@@ -33,11 +33,12 @@ Open your browser to http://localhost:8100
 Change 'branch-name' to your heroku project
 ```
 heroku git:remote -a branch-name
-npm run build
 ```
 
 ### heroku - deploy
 ```
+npm run build:prod
+
 git status
 git add .
 git commit -am "make it better"
