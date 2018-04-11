@@ -1,4 +1,4 @@
-import { Component, NgZone, OnInit, HostListener, isDevMode, OnDestroy } from '@angular/core';
+import { Component, NgZone, OnInit, HostListener, isDevMode, OnDestroy, ViewEncapsulation } from '@angular/core';
 
 import { AuthService } from "../auth/auth.service";
 import { CssModeService } from "../service/css.mode.service";
@@ -9,7 +9,8 @@ declare var $;
 @Component({
     selector: 'my-app',
     templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss']
+    styleUrls: ['./app.component.scss', './styles.scss'],
+    encapsulation: ViewEncapsulation.None
 })
 export class AppComponent implements OnInit, OnDestroy {
 
